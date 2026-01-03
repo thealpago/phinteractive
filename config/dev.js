@@ -11,7 +11,7 @@ module.exports = merge(common, {
 			},
 			{
 				directory: './static',
-				publicPath: '/static',
+				publicPath: '/',
 			}
 		],
 		host: '0.0.0.0',
