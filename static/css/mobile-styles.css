@@ -1,0 +1,87 @@
+/* Mobile Toggle Button - Minimal */
+.gui-toggle {
+    display: none;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 10001;
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease;
+}
+
+.gui-toggle:hover {
+    color: white;
+}
+
+.container {
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    html,
+    body {
+        overflow: hidden;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .gui-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 80px;
+        right: 20px;
+        top: auto;
+        left: auto;
+    }
+
+    .glass-menu {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%) translateZ(0);
+        width: 90%;
+        max-width: 450px;
+        opacity: 0;
+        pointer-events: none;
+        background: transparent;
+        transition: opacity 0.4s ease;
+        will-change: opacity;
+    }
+
+    .glass-menu.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) translateZ(0);
+    }
+
+    .gui-instructions,
+    .gui-footer-divider {
+        display: none;
+    }
+
+    .photo-nav {
+        bottom: 40px;
+        gap: 8px;
+    }
+
+    .photo-title {
+        font-size: 0.7rem;
+    }
+
+    .gui-info {
+        display: none;
+    }
+}
